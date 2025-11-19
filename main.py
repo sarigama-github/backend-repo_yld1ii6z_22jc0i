@@ -58,6 +58,7 @@ async def create_submission(
     rental_income_occupancy: Optional[str] = Form(None),
     issues: Optional[str] = Form(None),
     contact_details: str = Form(...),
+    brochure_url: Optional[str] = Form(None),
     file: Optional[UploadFile] = File(None),
 ):
     if db is None:
@@ -80,6 +81,7 @@ async def create_submission(
         rental_income_occupancy=rental_income_occupancy,
         issues=issues,
         contact_details=contact_details,
+        brochure_url=brochure_url,
         file_id=file_id,
         source_ip=request.client.host if request.client else None,
     )

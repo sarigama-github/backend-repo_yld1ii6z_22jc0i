@@ -42,5 +42,6 @@ class Submission(BaseModel):
     rental_income_occupancy: Optional[str] = None
     issues: Optional[str] = None
     contact_details: str
+    brochure_url: Optional[str] = None
     file_id: Optional[str] = None
     source_ip: Optional[str] = None
